@@ -1,0 +1,23 @@
+.navbar {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.navbar-item {
+  display: inline-block;
+  height: 3rem;
+  width: 5rem;
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+}
+
+a {
+  display: inline-block;
+}
+
+#logo {
+  position: absolute;
+  right: 2rem;
+}
