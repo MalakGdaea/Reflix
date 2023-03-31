@@ -10,7 +10,7 @@
   text-align: center;
   font-family: cursive;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 a {
@@ -19,5 +19,10 @@ a {
 
 #logo {
   position: absolute;
-  right: 2rem;
+  right: 4rem;
+}
+
+#logo img {
+  width: 7rem;
+  height: 2.5rem;
 }

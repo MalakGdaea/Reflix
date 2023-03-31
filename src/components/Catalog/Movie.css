@@ -2,3 +2,14 @@
   width: 15rem;
   height: 20rem;
 }
+
+.icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  left: 13rem;
+}
+
+.movie-box {
+  position: relative;
+}

@@ -1,3 +1,4 @@
+import logo from '../../REFLIX1.png'
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -10,7 +11,7 @@ export default function Navbar() {
       <Link to="/catalog">
         <div className="navbar-item">Catalog</div>
       </Link>
-      <div className="navbar-item" id="logo">Reflix</div>
+      <div className="navbar-item" id="logo"><img src={logo}/></div>
     </div>
   );
 }
