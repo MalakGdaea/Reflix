@@ -3,25 +3,21 @@ export const usersData = [
     id: 1,
     name: "malak",
     color: "#19A7CE",
-    budget: 2000,
   },
   {
     id: 2,
     name: "angela",
     color: "#FF0032",
-    budget: 3000,
   },
   {
     id: 3,
     name: "john",
     color: "#EBB02D",
-    budget: 4000,
   },
   {
     id: 4,
     name: "asraa",
     color: "#03C988",
-    budget: 5000,
   },
 ];
 
