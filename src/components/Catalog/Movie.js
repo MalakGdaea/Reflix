@@ -1,16 +1,24 @@
 import "./Movie.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-function Movie({ movie, action }) {
+
+function Movie({ movie, rent, unRent }) {
+  const location = useLocation();
   return (
     <div className="movie-box">
-      <Link to={`/catalog/${movie.id}`}>
+      <Link to={`${location.pathname}/${movie.id}`} relative="path">
         <img className="movieImg" src={movie.img} />
       </Link>
       {movie.isRented ? (
-        <i onClick={() => action("unrent", movie.id)} className="material-icons icon"> remove_circle</i>
+        <i onClick={() => unRent(movie.id)} className="material-icons icon">
+          {" "}
+          remove_circle
+        </i>
       ) : (
-        <i onClick={() => action("rent", movie.id)} className="material-icons icon"> add_circle</i>
+        <i onClick={() => rent(movie.id)} className="material-icons icon">
+          {" "}
+          add_circle
+        </i>
       )}
     </div>
   );

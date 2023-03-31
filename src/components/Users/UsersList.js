@@ -7,11 +7,18 @@ export default function UsersList({ users }) {
     <div className="container">
       <h2>WHO'S WATCHING?</h2>
       <div className="users-container">
-        {users.map((user) => (
-          <Link to="/catalog">
+        {users.map((user) => {
+          let savedUser = localStorage[user.id];
+          if (!savedUser) {
+            localStorage.setItem(
+              user.id,
+              JSON.stringify({ budget: 15, rentedMoviesIDs: [] })
+            );
+          }
+          return <Link to={`/catalog/${user.id}`}>
             <UserCard user={user} key={user.id} />
-          </Link>
-        ))}
+          </Link>;
+        })}
       </div>
     </div>
   );

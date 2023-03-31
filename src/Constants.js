@@ -24,7 +24,7 @@ export const usersData = [
 export const moviesData = [
   {
     id: 0,
-    isRented: true,
+    isRented: false,
     title: "Tarzan",
     year: 1999,
     img: "https://vignette.wikia.nocookie.net/disney-fan-fiction/images/4/42/Tarzan_2004_cover.jpg/revision/latest?cb=20140331030811",
@@ -66,5 +66,23 @@ export const moviesData = [
     img: "https://images-na.ssl-images-amazon.com/images/I/51ArFYSFGJL.jpg",
     descrShort:
       "Basically the same as the original, except now Hermi-- Emma Wattson plays Belle, fittingly so some would say, given how actively progressive she is regarding women's rights. Rumor has it that in the bonus scenes she whips out a wand and turns Gaston into a toad, but in order to watch those scenes you need to recite a certain incantation.",
+  },
+  {
+    id: 5,
+    isRented: false,
+    title: "Encanto",
+    year: 2021,
+    img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTIRrr5BMqEu1N-uDx5r-lW1w3xRyJ2W-j8KCRwn9L8ukTRt-Eb",
+    descrShort:
+      "The Madrigals are an extraordinary family who live hidden in the mountains of Colombia in a charmed place called the Encanto. The magic of the Encanto has blessed every child in the family with a unique gift -- every child except Mirabel. However, she soon may be the Madrigals last hope when she discovers that the magic surrounding the Encanto is now in danger.",
+  },
+  {
+    id: 6,
+    isRented: false,
+    title: "Alice in Wonderland",
+    year: 2010,
+    img: "https://upload.wikimedia.org/wikipedia/en/3/36/Alice_in_Wonderland_%282010_film%29.png",
+    descrShort:
+      "Alice, now 19 years old, follows a rabbit in a blue coat to a magical wonderland from her dreams where she is reunited with her friends who make her realise her true destiny.",
   },
 ];
