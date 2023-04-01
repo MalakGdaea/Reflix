@@ -79,10 +79,19 @@ export const moviesData = [
   {
     id: 6,
     isRented: false,
-    title: "Alice in Wonderland",
-    year: 2010,
-    img: "https://upload.wikimedia.org/wikipedia/en/3/36/Alice_in_Wonderland_%282010_film%29.png",
+    title: "Polar Bear",
+    year: 2022,
+    img: "https://upload.wikimedia.org/wikipedia/en/6/62/Polar_Bear_film_poster.png",
     descrShort:
-      "Alice, now 19 years old, follows a rabbit in a blue coat to a magical wonderland from her dreams where she is reunited with her friends who make her realise her true destiny.",
+      "A mother polar bear's memories of her youth prepare her to navigate the increasingly challenging world that polar bears face today.",
+  },
+  {
+    id: 7,
+    isRented: false,
+    title: "Avatar: The Way of Water",
+    year: 2022,
+    img: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmGggtpJ4TX3aN3PUaVWUgNODHespRPvKYAyhGUAZSqSOmPiEm",
+    descrShort:
+      "Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.",
   },
 ];
