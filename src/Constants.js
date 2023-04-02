@@ -95,3 +95,5 @@ export const moviesData = [
       "Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora. When an ancient threat resurfaces, Jake must fight a difficult war against the humans.",
   },
 ];
+
+export const MOVIE_COST = 3;

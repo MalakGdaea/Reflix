@@ -10,7 +10,6 @@ export default function Navbar() {
     locationPath.pop();
   }
 
-  console.log(location.pathname);
   return (
     <div className="navbar">
       <Link to="/">
