@@ -21,6 +21,8 @@ export const usersData = [
   },
 ];
 
+export const BUDGET = 15;
+
 export const moviesData = [
   {
     id: 0,

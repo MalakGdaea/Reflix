@@ -1,6 +1,7 @@
 import "./UserList.css";
 import { Link } from "react-router-dom";
 import UserCard from "./UserCard";
+import { BUDGET } from "../../Constants";
 
 export default function UsersList({ users }) {
   return (
@@ -12,12 +13,14 @@ export default function UsersList({ users }) {
           if (!savedUser) {
             localStorage.setItem(
               user.id,
-              JSON.stringify({ budget: 15, rentedMoviesIDs: [] })
+              JSON.stringify({ budget: BUDGET, rentedMoviesIDs: [] })
             );
           }
-          return <Link to={`/catalog/${user.id}`}>
-            <UserCard user={user} key={user.id} />
-          </Link>;
+          return (
+            <Link to={`/catalog/${user.id}`}>
+              <UserCard user={user} key={user.id} />
+            </Link>
+          );
         })}
       </div>
     </div>
