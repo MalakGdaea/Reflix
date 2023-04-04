@@ -4,14 +4,14 @@ import "./MovieDetails.css";
 
 function MovieDetails() {
   const { movieID } = useParams();
-  let movie = moviesData.find((movie) => movie.id === movieID);
+  let selectedMovie = moviesData.find((movie) => movie.id == movieID);
   return (
     <div className="container">
       <h3>
-        {movie.title} ({movie.year})
+        {selectedMovie.title} ({selectedMovie.year})
       </h3>
-      <img src={movie.img} alt={movie.title}/>
-      <p>{movie.descrShort}</p>
+      <img src={selectedMovie.img} alt={selectedMovie.title} />
+      <p>{selectedMovie.descrShort}</p>
     </div>
   );
 }
