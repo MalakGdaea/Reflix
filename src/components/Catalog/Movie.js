@@ -7,16 +7,14 @@ function Movie({ movie, rent, unRent }) {
   return (
     <div className="movie-box">
       <Link to={`${location.pathname}/${movie.id}`} relative="path">
-        <img className="movieImg" src={movie.img} />
+        <img className="movieImg" src={movie.img} alt={movie.title}/>
       </Link>
       {movie.isRented ? (
         <i onClick={() => unRent(movie.id)} className="material-icons icon">
-          {" "}
           remove_circle
         </i>
       ) : (
         <i onClick={() => rent(movie.id)} className="material-icons icon">
-          {" "}
           add_circle
         </i>
       )}

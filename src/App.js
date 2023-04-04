@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
 import Navbar from "./components/Header/Navbar";
 import Home from "./components/Home";
 import Catalog from "./components/Catalog/Catalog";
@@ -22,3 +21,7 @@ function App() {
 }
 
 export default App;
+
+
+// make a data file for users and one for movies
+// Think about change the data structure 

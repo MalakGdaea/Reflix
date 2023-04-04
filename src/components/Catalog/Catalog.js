@@ -1,4 +1,5 @@
-import { moviesData, MOVIE_COST } from "../../Constants";
+import { MOVIE_COST } from "../../Constants";
+import  moviesData  from "../../data/movies-data";
 import MoviesList from "./MoviesList";
 import { useState } from "react";
 import "./Catalog.css";
@@ -22,7 +23,7 @@ function Catalog() {
   const [searchMovie, setSearchMovie] = useState("");
   const [budget, setBudget] = useState(user.budget);
 
-  let rentedMovies = movies.filter((movie) => movie.isRented == true);
+  let rentedMovies = movies.filter((movie) => movie.isRented === true);
 
   const updateSearchMovie = (event) => {
     setSearchMovie(event.target.value);
@@ -35,7 +36,7 @@ function Catalog() {
     );
     setMovies(filteredMovies);
   };
-
+  // action name
   const rent = (movieID) => {
     if (budget - MOVIE_COST < 0) {
       alert("There are insufficient funds");
@@ -48,14 +49,15 @@ function Catalog() {
 
   const unRent = (movieID) => {
     let updatedBudget = budget + MOVIE_COST;
-    let movieIndex = user.rentedMoviesIDs.findIndex((id) => id == movieID);
+    let movieIndex = user.rentedMoviesIDs.findIndex((id) => id === movieID);
     user.rentedMoviesIDs.splice(movieIndex, 1);
     updateUserBudgetAndRentedMovies(movieID ,updatedBudget, false);
   };
-
+  
+  // update budget and update rented movies in separate function
   const updateUserBudgetAndRentedMovies = (movieID,updatedBudget, isRented) => {
     let moviesCopy = [...movies];
-    let movie = moviesCopy.find((movie) => movie.id == movieID);
+    let movie = moviesCopy.find((movie) => movie.id === movieID);
     setBudget(updatedBudget);
     user.budget = updatedBudget;
     movie.isRented = isRented;
@@ -68,7 +70,7 @@ function Catalog() {
       <div className="search-and-budget">
         <input id="search-input" type="text" value={searchMovie} placeholder="Search"
         onChange={updateSearchMovie}></input>
-        <span id="budget">Budget: ${budget}.00</span>
+        <span id="budget">Budget: ${budget.toFixed(2)}</span>
       </div>
       {rentedMovies.length !== 0 ? (
         <MoviesList movies={rentedMovies} catalogTitle={"Rented"} rent={rent} unRent={unRent}/>

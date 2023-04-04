@@ -1,9 +1,8 @@
 import UsersList from "./Users/UsersList";
-import { usersData } from "../Constants";
-import { useState } from "react";
+import  usersData  from "../data/users-data";
 
 function Home() {
-  const [users, setUsers] = useState(usersData);
+  const users = usersData;
   return <UsersList users={users} />;
 }
 

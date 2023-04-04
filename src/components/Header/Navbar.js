@@ -18,7 +18,7 @@ export default function Navbar() {
       <Link to={`${locationPath.join("/")}`}>
         <div className="navbar-item">Catalog</div>
       </Link>
-      <div className="navbar-item" id="logo">
+      <div className="navbar-item" id="logo" alt={"logo"}>
         <img src={logo} />
       </div>
     </div>

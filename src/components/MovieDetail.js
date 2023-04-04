@@ -1,16 +1,16 @@
 import { useParams } from "react-router-dom";
-import { moviesData } from "../Constants";
+import moviesData from "../data/movies-data";
 import "./MovieDetails.css";
 
 function MovieDetails() {
   const { movieID } = useParams();
-  let movie = moviesData.find((movie) => movie.id == movieID);
+  let movie = moviesData.find((movie) => movie.id === movieID);
   return (
     <div className="container">
       <h3>
         {movie.title} ({movie.year})
       </h3>
-      <img src={movie.img} />
+      <img src={movie.img} alt={movie.title}/>
       <p>{movie.descrShort}</p>
     </div>
   );
